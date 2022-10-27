@@ -52,10 +52,46 @@ public class ManipulationsWithArrays {
         return arrayDouble;
     }
 
+    /*
+    Написать метод toIntArray(), который принимает на вход массив типа double[],
+    и возвращает массив типа int[] из тех же чисел
+     */
+
+    public static int[] toIntArray(double[] array){
+
+        if(array == null){
+
+            return new int[0];
+        }
+        if(array.length == 0){
+
+            return new int[0];
+        }
+
+        int[] arrayInt = new int[array.length];
+         for(int i = 0;i < array.length;i++){
+
+             arrayInt[i] = (int) array[i];
+         }
+
+         return arrayInt;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
     public static void main(String[] args) {
 
-        int[] array = {0, 0, 0, 4, 5};
-        System.out.println(Arrays.toString(toDoubleArray(array)));
+        double[] array = {0.9, 2.6, 3.9, 4, 5};
+        System.out.println(Arrays.toString(toIntArray(array)));
     }
 
 }
